@@ -9,8 +9,6 @@ import UIKit
 
 class StatisticsTabel: UITableView {
     
-//    weak var ststisticVS: StatisticViewController?
-    
     //MARK: - Arrays with data
     public var arrayModels = [WorkoutModel]()   // Всем модели
     

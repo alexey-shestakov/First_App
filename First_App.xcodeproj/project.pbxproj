@@ -56,6 +56,7 @@
 		C5E7629629B433EB00A414F4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7629529B433EB00A414F4 /* TitleLabel.swift */; };
 		C5FA361F29CC74E800BBD7FC /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA361E29CC74E800BBD7FC /* TableView.swift */; };
 		C5FA362129CC75B600BBD7FC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362029CC75B600BBD7FC /* TableViewCell.swift */; };
+		C5FA362429CDE66A00BBD7FC /* DifferenceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362329CDE66A00BBD7FC /* DifferenceWorkout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		C5E7629529B433EB00A414F4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		C5FA361E29CC74E800BBD7FC /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		C5FA362029CC75B600BBD7FC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C5FA362329CDE66A00BBD7FC /* DifferenceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceWorkout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		C516580E29B0BAC5006E6671 /* StatisticModule */ = {
 			isa = PBXGroup;
 			children = (
+				C5FA362229CDE65D00BBD7FC /* Models */,
 				C516580F29B0BAF0006E6671 /* Views */,
 				C516581029B0BAF7006E6671 /* Controllers */,
 			);
@@ -402,6 +405,14 @@
 			path = CustomReuseViews;
 			sourceTree = "<group>";
 		};
+		C5FA362229CDE65D00BBD7FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA362329CDE66A00BBD7FC /* DifferenceWorkout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -519,6 +530,7 @@
 				C5BA3CA829A4CA6A00F4D07C /* CalendarView.swift in Sources */,
 				C5817CA829BE6E2E0050E047 /* ImageWorkoutView.swift in Sources */,
 				C5A2D85C29BD14A900346A63 /* ImageWorkoutCell.swift in Sources */,
+				C5FA362429CDE66A00BBD7FC /* DifferenceWorkout.swift in Sources */,
 				C5A2D84C29BB82A700346A63 /* Int + extensions.swift in Sources */,
 				C5BA3C9129A4A89E00F4D07C /* SceneDelegate.swift in Sources */,
 				C53CE2D229B5CCA60089FDDF /* BrownTextField.swift in Sources */,

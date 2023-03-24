@@ -67,7 +67,7 @@ class StatisticViewController: UIViewController {
         tableHistory.reloadData()
     }
     
-    private func getStatisticsWorkout(date: Date) {
+    private func getStatisticsWorkout(date: Date) {   //Как и в mainVC это может делать менеджер, это на задача контроллера, это обязанность менеджера
         var resultArrays = RealmManager.shared.getResultWorkoutModel()
         let date = tableHistory.countFromDate as NSDate
         
