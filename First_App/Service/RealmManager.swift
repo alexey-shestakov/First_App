@@ -29,5 +29,18 @@ class RealmManager {
             realm.delete(model)
         }
     }
+    
+    func changeWorkoutSetsReps(model: WorkoutModel, reps: Int, sets: Int) {
+        try! realm.write {
+            model.workoutReps = reps
+            model.workoutSets = sets
+        }
+    }
+    
+    func makeWorkoutDone(model: WorkoutModel, status: Bool) {
+        try! realm.write {
+            model.status = status
+        }
+    }
 }
 

@@ -15,7 +15,7 @@ extension Date {
         return weekday
     }
     
-    func localDate() -> Date {
+    func localDate() -> Date {          // С этой штукой осторожней, она добавляет секунды
         let timeZoneOffset = Double(TimeZone.current.secondsFromGMT(for: self))              //Смещение в секундах
         let localDate = Calendar.current.date(byAdding: .second, value: Int(timeZoneOffset), to: self) ?? Date()
         return localDate

@@ -57,6 +57,10 @@
 		C5FA361F29CC74E800BBD7FC /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA361E29CC74E800BBD7FC /* TableView.swift */; };
 		C5FA362129CC75B600BBD7FC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362029CC75B600BBD7FC /* TableViewCell.swift */; };
 		C5FA362429CDE66A00BBD7FC /* DifferenceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362329CDE66A00BBD7FC /* DifferenceWorkout.swift */; };
+		C5FA362A29CDF4DC00BBD7FC /* RepsWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362729CDF4DC00BBD7FC /* RepsWorkoutViewController.swift */; };
+		C5FA362B29CDF4DC00BBD7FC /* RepsWorkoutParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362929CDF4DC00BBD7FC /* RepsWorkoutParametersView.swift */; };
+		C5FA363129CE184600BBD7FC /* TimerWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA362E29CE184600BBD7FC /* TimerWorkoutViewController.swift */; };
+		C5FA363229CE184600BBD7FC /* TimerWorkoutParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA363029CE184600BBD7FC /* TimerWorkoutParametersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +114,10 @@
 		C5FA361E29CC74E800BBD7FC /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		C5FA362029CC75B600BBD7FC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5FA362329CDE66A00BBD7FC /* DifferenceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceWorkout.swift; sourceTree = "<group>"; };
+		C5FA362729CDF4DC00BBD7FC /* RepsWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepsWorkoutViewController.swift; sourceTree = "<group>"; };
+		C5FA362929CDF4DC00BBD7FC /* RepsWorkoutParametersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepsWorkoutParametersView.swift; sourceTree = "<group>"; };
+		C5FA362E29CE184600BBD7FC /* TimerWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerWorkoutViewController.swift; sourceTree = "<group>"; };
+		C5FA363029CE184600BBD7FC /* TimerWorkoutParametersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerWorkoutParametersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +301,8 @@
 				C5BA3CA329A4AD0D00F4D07C /* MainModule */,
 				C5A39E8829CC57CB00BDC7C6 /* AllTrainingsModule */,
 				C5E7628B29B418E100A414F4 /* NewWorkoutModule */,
+				C5FA362529CDF4DC00BBD7FC /* RepsWorkoutModule */,
+				C5FA362C29CE184600BBD7FC /* TimerWorkoutModule */,
 				C516580E29B0BAC5006E6671 /* StatisticModule */,
 				C5A2D85729BCFA8900346A63 /* Service */,
 				C5E7629229B42ABA00A414F4 /* CustomReuseViews */,
@@ -413,6 +423,56 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C5FA362529CDF4DC00BBD7FC /* RepsWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA362829CDF4DC00BBD7FC /* Views */,
+				C5FA362629CDF4DC00BBD7FC /* Controllers */,
+			);
+			path = RepsWorkoutModule;
+			sourceTree = "<group>";
+		};
+		C5FA362629CDF4DC00BBD7FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA362729CDF4DC00BBD7FC /* RepsWorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C5FA362829CDF4DC00BBD7FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA362929CDF4DC00BBD7FC /* RepsWorkoutParametersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5FA362C29CE184600BBD7FC /* TimerWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA362F29CE184600BBD7FC /* Views */,
+				C5FA362D29CE184600BBD7FC /* Controllers */,
+			);
+			path = TimerWorkoutModule;
+			sourceTree = "<group>";
+		};
+		C5FA362D29CE184600BBD7FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA362E29CE184600BBD7FC /* TimerWorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C5FA362F29CE184600BBD7FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA363029CE184600BBD7FC /* TimerWorkoutParametersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,6 +559,7 @@
 				C516580729ACF4CF006E6671 /* UILabel + Extensions.swift in Sources */,
 				C53CE2CB29B5C3760089FDDF /* NameView.swift in Sources */,
 				C52FD5CA29B8A28400782AF9 /* GreenSlider.swift in Sources */,
+				C5FA363129CE184600BBD7FC /* TimerWorkoutViewController.swift in Sources */,
 				C516581429B0C10B006E6671 /* StatisticsTable.swift in Sources */,
 				C5A2D85429BCF2CB00346A63 /* Date + extensions.swift in Sources */,
 				C58AB55229C08F090098908A /* UIViewController + Extensions.swift in Sources */,
@@ -509,6 +570,7 @@
 				C583317029A53E0C0078FBD5 /* WeatherView.swift in Sources */,
 				C50C71D029A902EF002649C0 /* UIFont + Extensions.swift in Sources */,
 				C5E7628F29B4193700A414F4 /* NewWorkoutViewController.swift in Sources */,
+				C5FA362B29CDF4DC00BBD7FC /* RepsWorkoutParametersView.swift in Sources */,
 				C5817CAA29BE779C0050E047 /* WorkoutImages.swift in Sources */,
 				C516580D29ADF619006E6671 /* WorkoutTableViewCell.swift in Sources */,
 				C50C71DE29AAC1B0002649C0 /* CalendarCollectionViewCell.swift in Sources */,
@@ -527,10 +589,12 @@
 				C5E7629429B42B0D00A414F4 /* CloseButton.swift in Sources */,
 				C5A2D85229BCE0E900346A63 /* WorkoutModel.swift in Sources */,
 				C5FA362129CC75B600BBD7FC /* TableViewCell.swift in Sources */,
+				C5FA363229CE184600BBD7FC /* TimerWorkoutParametersView.swift in Sources */,
 				C5BA3CA829A4CA6A00F4D07C /* CalendarView.swift in Sources */,
 				C5817CA829BE6E2E0050E047 /* ImageWorkoutView.swift in Sources */,
 				C5A2D85C29BD14A900346A63 /* ImageWorkoutCell.swift in Sources */,
 				C5FA362429CDE66A00BBD7FC /* DifferenceWorkout.swift in Sources */,
+				C5FA362A29CDF4DC00BBD7FC /* RepsWorkoutViewController.swift in Sources */,
 				C5A2D84C29BB82A700346A63 /* Int + extensions.swift in Sources */,
 				C5BA3C9129A4A89E00F4D07C /* SceneDelegate.swift in Sources */,
 				C53CE2D229B5CCA60089FDDF /* BrownTextField.swift in Sources */,

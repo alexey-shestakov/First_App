@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     
     private var tableView = MainTableView()
     
-    var selectedDate = Date().localDate()
+    var selectedDate = Date()
     
     private let userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -198,8 +198,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController: CalendarCollectionViewProtocol {
     func selectItem(date: Date) {
-        selectedDate = date
-        getWorkouts(date: date)                                 // Нажимая на даты, workoutArray обновляется
+        selectedDate = date      // Нажимая на дату в selectedDate улетает выдранная дата и если мы создаем новую тренироку, то в selected дата есть
+        getWorkouts(date: selectedDate)                                 // Нажимая на даты, workoutArray обновляется
         tableView.reloadData()
         checkWorkoutToday()                                             // Проверяем есть ли в workoutArray данные
     }
@@ -217,10 +217,12 @@ extension MainViewController: MainTableViewProtocol {
 
 //MARK: - WorkoutCellProtocol
 extension MainViewController: WorkoutCellProtocol {
-    func startButtonTapped(model: WorkoutModel) {
-        print(model)
+    func startButtonTapped(model: WorkoutModel) {           // Модель идет из ячейки, значит нужно ее передавать в тот VC, который открывается
         if model.workoutTimer == 0 {
-            print("reps")
+            let repsWorkoutVC = RepsWorkoutViewController()     //Можно было сразу инициализировать с моделью
+            repsWorkoutVC.setModel(model: model)
+            repsWorkoutVC.modalPresentationStyle = .fullScreen
+            present(repsWorkoutVC, animated: true)
         } else {
             print("timer")
         }
