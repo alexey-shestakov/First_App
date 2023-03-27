@@ -7,10 +7,6 @@
 import UIKit
 
 class RepsWorkoutViewController: UIViewController {
-<<<<<<< HEAD
-    //
-=======
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
    
     private let startWorkoutLabel = TitleLabel(text: "START WORKOUT",
                                           font: .robotoMedium24(),
@@ -29,25 +25,19 @@ class RepsWorkoutViewController: UIViewController {
     private let informationExerciseView = RepsWorkoutParametersView()
     private lazy var finishButton = GreenButton(text: "FINISH")
     
-<<<<<<< HEAD
-    private var numberOfSet = 1 {
-        didSet {
-            informationExerciseView.refreshLabels(model: workoutModel, numberOfSets: numberOfSet)
-        }
-    }
     
-=======
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
+    private var numberOfSet = 1 //{
+//        didSet {
+//            informationExerciseView.refreshLabels(model: workoutModel, numberOfSets: numberOfSet)
+//        }
+    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         setConstrains()
-<<<<<<< HEAD
         setDelegates()
-=======
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
     }
     
     private func setupViews() {
@@ -68,19 +58,15 @@ class RepsWorkoutViewController: UIViewController {
         }
     }
     
-<<<<<<< HEAD
     private func setDelegates() {
         informationExerciseView.repsVC = self
     }
-    
-=======
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
+
     @objc private func closeButtonTapped() {
         dismiss(animated: true)
     }
     
     @objc private func finishButtonTabbed() {
-<<<<<<< HEAD
         RealmManager.shared.makeWorkoutDone(model: workoutModel, status: true)
         dismiss(animated: true)
         print(workoutModel)
@@ -100,11 +86,17 @@ class RepsWorkoutViewController: UIViewController {
 
 extension RepsWorkoutViewController: NextSetProtocol {
     func nextSet() {
-        guard numberOfSet != workoutModel.workoutSets else {
-            RealmManager.shared.makeWorkoutDone(model: workoutModel, status: true)
-            return dismiss(animated: true)
+//        guard numberOfSet < workoutModel.workoutSets else {
+//            RealmManager.shared.makeWorkoutDone(model: workoutModel, status: true)
+//            return dismiss(animated: true)
+//        }
+//        numberOfSet += 1
+        if numberOfSet < workoutModel.workoutSets {
+            numberOfSet += 1                                                                                        // Либо через обсервер
+            informationExerciseView.refreshLabels(model: workoutModel, numberOfSets: numberOfSet)
+        } else {
+            presentSimpleAlert(title: "Харош!", message: "Отдыхай")
         }
-        numberOfSet += 1
     }
     
     func editingStatred() {
@@ -112,11 +104,6 @@ extension RepsWorkoutViewController: NextSetProtocol {
         informationExerciseView.refreshLabels(model: workoutModel, numberOfSets: numberOfSet)
         
     }
-=======
-        print("Finish")
-    }
-    
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
 }
 
 extension RepsWorkoutViewController {

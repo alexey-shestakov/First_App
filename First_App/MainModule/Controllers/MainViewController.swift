@@ -217,16 +217,10 @@ extension MainViewController: MainTableViewProtocol {
 
 //MARK: - WorkoutCellProtocol
 extension MainViewController: WorkoutCellProtocol {
-<<<<<<< HEAD
     func startButtonTapped(model: WorkoutModel) {           // Модель идет из ячейки, значит нужно ее передавать в тот VC, который открывается
         if model.workoutTimer == 0 {
             let repsWorkoutVC = RepsWorkoutViewController()     //Можно было сразу инициализировать с моделью
             repsWorkoutVC.setModel(model: model)
-=======
-    func startButtonTapped(model: WorkoutModel) {
-        if model.workoutTimer == 0 {
-            let repsWorkoutVC = RepsWorkoutViewController()
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
             repsWorkoutVC.modalPresentationStyle = .fullScreen
             present(repsWorkoutVC, animated: true)
         } else {

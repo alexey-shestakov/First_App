@@ -7,7 +7,6 @@
 
 import UIKit
 
-<<<<<<< HEAD
 protocol NextSetProtocol: AnyObject {
     func nextSet()
     func editingStatred()
@@ -17,10 +16,6 @@ class RepsWorkoutParametersView: UIView {
     
     weak var repsVC: NextSetProtocol?
     
-=======
-class RepsWorkoutParametersView: UIView {
-    
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
     private let workoutNameLabel = UILabel(text: "Biceps", font: .robotoMedium24(), textColor: .specialGray, textAligment: .center)
     
     private let setsLabel = UILabel(text: "Sets", font: .robotoMedium18(), textColor: .specialGray, textAligment: .left)
@@ -92,19 +87,13 @@ class RepsWorkoutParametersView: UIView {
         setsStackView = UIStackView(arrangedSubviews: [setsLabel, numberOfSetsLabel],
                                     axis: .horizontal,
                                     spacing: 10)
-<<<<<<< HEAD
         setsStackView.distribution = .equalSpacing
-=======
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
         addSubview(setsStackView)
         addSubview(customSeparatorFirst)
         repsStackView = UIStackView(arrangedSubviews: [repsLabel, numberOfRepsLabel],
                                     axis: .horizontal,
                                     spacing: 10)
-<<<<<<< HEAD
         repsStackView.distribution = .equalSpacing
-=======
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
         addSubview(repsStackView)
         addSubview(customSeparatorSecond)
         addSubview(editingButton)
@@ -113,7 +102,6 @@ class RepsWorkoutParametersView: UIView {
     
     
     @objc private func editingButtonTapped() {
-<<<<<<< HEAD
         repsVC?.editingStatred()
     }
     
@@ -125,16 +113,8 @@ class RepsWorkoutParametersView: UIView {
         workoutNameLabel.text = "\(model.workoutName)"
         numberOfSetsLabel.text = "\(numberOfSets)/\(model.workoutSets)"
         numberOfRepsLabel.text = "\(model.workoutReps)"
-=======
-        
-    }
-    
-    @objc private func nextButtonTapped() {
-        
->>>>>>> 23b94f7bc2cba1158d0a33f1391593db223da03b
     }
 }
-
 extension RepsWorkoutParametersView {
     private func setConstraints() {
         NSLayoutConstraint.activate([
