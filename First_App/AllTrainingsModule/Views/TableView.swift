@@ -17,6 +17,7 @@ class AllWorkoutsTableView: UITableView {
         setDelegated()
         configure()
         register(AllWorkoutsTableViewCell.self, forCellReuseIdentifier: AllWorkoutsTableViewCell.idTableViewCell)
+
     }
     
     required init?(coder: NSCoder) {

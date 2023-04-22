@@ -170,13 +170,33 @@ class MainViewController: UIViewController {
 //        workoutArray = filteredArray.map{ $0 }  // Записывет каждое значение в пустой масиив из filteredArray
 //    }
     
-    private func getWorkouts(date: Date) {      // Сортировка по дате без 
+    
+    
+    // Будет каждый раз добавляться одна и таже запись, если сделать Добавление, ПЕРЕДЕЛАТЬ!!!!!!!!
+    private func addWorkouts(date: Date) {
         let resultArray = RealmManager.shared.getResultWorkoutModel()
         
         let weekDay = date.getNumberOfDay()
-        let dateNeeded = date.onlyDate()
         
         let predicateRepeat = NSPredicate(format: "workoutNumberOfDay = \(weekDay) AND workoutRepeat = true")
+
+        let filteredArray = resultArray.filter(predicateRepeat)
+        workoutArray = filteredArray.map{ $0 }
+        
+        for i in workoutArray {
+            RealmManager.shared.saveWorkoutModel(i)
+        }
+        print(workoutArray)
+    }
+    
+    
+    private func getWorkouts(date: Date) {      // Сортировка по дате без 
+        let resultArray = RealmManager.shared.getResultWorkoutModel()
+        
+        // берем сегодняший день
+        let dateNeeded = date.onlyDate()
+        
+        let predicateRepeat = NSPredicate(format: "workoutRepeat = true AND workoutDate = %@", dateNeeded as NSDate)
         let predicateForDate = NSPredicate(format: "workoutRepeat = false AND workoutDate = %@", dateNeeded as NSDate)
 
         let compound = NSCompoundPredicate(type: .or, subpredicates: [predicateRepeat, predicateForDate])
@@ -198,7 +218,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController: CalendarCollectionViewProtocol {
     func selectItem(date: Date) {
-        selectedDate = date      // Нажимая на дату в selectedDate улетает выдранная дата и если мы создаем новую тренироку, то в selected дата есть
+        selectedDate = date      // Нажимая на дату в selectedDate улетает выбранная дата и если мы создаем новую тренироку, то в selected дата есть
+        addWorkouts(date: selectedDate)
         getWorkouts(date: selectedDate)                                 // Нажимая на даты, workoutArray обновляется
         tableView.reloadData()
         checkWorkoutToday()                                             // Проверяем есть ли в workoutArray данные

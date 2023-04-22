@@ -24,7 +24,18 @@ class CastomAlert {
         return view
     }()
     
-//    private scrollView = UIScrollView()
+    private let scrollView = UIScrollView()
     
+    private var mainView: UIView?   // тут будет значение глобальной переменной (размер экрана, чтобы верстать на фреймах)
+    
+    private let setsTextField = BrownTextField()
+    
+    private let repsTextField = BrownTextField()
+    
+    
+    //Метод, который будет вызывать этот alert
+    func presentCustomAlert(viewController: UIViewController) {         // 1 параметр - контроллер, на котором мы хотим все отобразить
+         
+    }
     
 }

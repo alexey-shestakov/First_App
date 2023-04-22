@@ -55,6 +55,12 @@ extension AllTrainingsViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+//            imageView.heightAnchor.constraint(equalTo: Constants.defaultImageWidth, multiplier: 1)
+            
+            
         ])
     }
 }
+
+
+
